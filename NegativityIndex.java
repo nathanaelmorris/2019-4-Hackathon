@@ -3,22 +3,16 @@ import java.util.*;
 import twitter4j.*;
 import twitter4j.conf.*;
 
-//TWITTER KEYS
-//oauth.consumerKey=TZ2ojnd1SUeBZoPGTB48FsR0s
-//oauth.consumerSecret=lLONlfKbPKcgOwH856b2dMZVpfvjUnuDmaZNXREbygakCsjhS8
-//oauth.accessToken=1114320820581675008-1EEqAIU9sFdAVljlWv7sRzyOWZFlfc
-//oauth.accessTokenSecret=twSM2V7avNgGv5zER3e4qGm5G2BDHJxx9ljqVSwzFQOb0
-
 
 public class NegativityIndex {
     public static void main(String[] args) {
 
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
-        .setOAuthConsumerKey("TZ2ojnd1SUeBZoPGTB48FsR0s")
-        .setOAuthConsumerSecret("lLONlfKbPKcgOwH856b2dMZVpfvjUnuDmaZNXREbygakCsjhS8")
-        .setOAuthAccessToken("1114320820581675008-1EEqAIU9sFdAVljlWv7sRzyOWZFlfc")
-        .setOAuthAccessTokenSecret("twSM2V7avNgGv5zER3e4qGm5G2BDHJxx9ljqVSwzFQOb0");
+        .setOAuthConsumerKey("")
+        .setOAuthConsumerSecret("")
+        .setOAuthAccessToken("")
+        .setOAuthAccessTokenSecret("");
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
 		try {
