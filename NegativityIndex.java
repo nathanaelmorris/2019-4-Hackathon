@@ -2,10 +2,25 @@ package Hackathon;
 import java.util.*;
 import twitter4j.*;
 import twitter4j.conf.*;
+import java.applet.*;
+import java.awt.*;
 
-public class NegativityIndex {
-    public static void main(String[] args) {
+public class NegativityIndex extends Applet{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static String user;
+
+	public void paint(Graphics g)
+	{
+		user = getParameter("user");
+	}
+	
+	
+    public static void main(String[] args) {    	
+    	
     	//Constructs twitter4j configuration with desired settings 
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
@@ -29,11 +44,13 @@ public class NegativityIndex {
 			 ResponseList<Status> statuses;
 			 
 			 //Scan system input into 'user' string
-			 Scanner input = new Scanner(System.in);
-			 System.out.println("Enter Twitter Screen Name: ");
-			 String user = input.nextLine();
+//			 Scanner input = new Scanner(System.in);
+//			 System.out.println("Enter Twitter Screen Name: ");
+//			 String user = input.nextLine();
+//			 String tempUser = user;
+//			 input.close();
+			 
 			 String tempUser = user;
-			 input.close();
 			 
 			 //Adds 'tempUser' as a friend to scrape tweets and retweets from the authentication user's timeline
 			 twitter.createFriendship(tempUser);
